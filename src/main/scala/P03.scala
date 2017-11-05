@@ -6,8 +6,7 @@ object P03 {
     def nth(curIndex: Int, list: List[T]): Option[T] = {
       if (curIndex == 0)
         list match {
-          case x :: xs  => Some(x)
-          case x :: Nil => Some(x)
+          case x :: _  => Some(x)
           case Nil      => None
         } else if (list.drop(1) == Nil) None
       else nth(curIndex - 1, list.drop(1))
